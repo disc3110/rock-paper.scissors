@@ -1,19 +1,31 @@
-function alertF(){
-  alert("YAY");
+const compChoice = document.getElementById("computersChoice");
+const CCImg = document.getElementById('CCImg');
+function scigame(){
+  compChoice.style.display= 'block'
+  determWin(1,getCompResu());
+}
+function papergame(){
+  determWin(2,getCompResu());
+}
+function rockgame(){
+  determWin(3,getCompResu());
 }
 function getCompResu(){
   let rand = Math.random();
   let result ;
   if (rand<.33){
+    CCImg.src = "./images/scissors.jpeg";
     result = 1
     return result
   }
   else if (rand<.66){
     result = 2
+    CCImg.src = "./images/paper.jpeg";
     return result
   }
   else {
     result = 3
+    CCImg.src = "./images/rock.jpeg";
     return result
   }
 }
@@ -60,9 +72,11 @@ function determWin(u,c){
       else {alert("Smth is wrong");}
 }
 
-determWin(1,getCompResu());
-
 
 const sci= document.getElementById("sci");
 const rock= document.querySelector('#rock');
 const pap = document.querySelector('#pap');
+
+sci.addEventListener('click',scigame);
+pap.addEventListener('click',papergame)
+rock.addEventListener('click',rockgame);
