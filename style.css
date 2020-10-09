@@ -22,9 +22,9 @@ width: fit-content;
 margin-left: auto;
 margin-right: auto;
 }
-.computersChoice {
+#computersChoice {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  display: none;
 }
- 
