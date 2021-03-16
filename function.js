@@ -14,18 +14,18 @@ function getCompResu(){
   let rand = Math.random();
   let result ;
   if (rand<.33){
-    CCImg.src = "./images/scissors.jpeg";
+    CCImg.src = "Images/scissors.jpeg";
     result = 1
     return result
   }
   else if (rand<.66){
     result = 2
-    CCImg.src = "./images/paper.jpeg";
+    CCImg.src = "Images/paper.jpeg";
     return result
   }
   else {
     result = 3
-    CCImg.src = "./images/rock.jpeg";
+    CCImg.src = "Images/rock.jpeg";
     return result
   }
 }
